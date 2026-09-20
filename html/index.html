@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Jogo da Velha</title>
+</head>
+
+<body>
+
+    <div class="jogo">
+
+        <div class="titulo">
+            <span class="placar placar-principal">0 x 0</span>
+            <h1>Jogo da Velha</h1>
+        </div>
+
+        <div class="jogador jogador1">
+            <div class="avatar-wrapper" style="position: relative;">
+                <span class="simbolo-badge"></span>
+                <div class="avatar"><span class="icone">👤</span></div>
+            </div>
+            <span class="nome">User 1</span>
+        </div>
+
+        <div class="quadrado">
+            <div class="parte"></div>
+            <div class="parte"></div>
+            <div class="parte"></div>
+            <div class="parte"></div>
+            <div class="parte"></div>
+            <div class="parte"></div>
+            <div class="parte"></div>
+            <div class="parte"></div>
+            <div class="parte"></div>
+        </div>
+
+        <div class="jogador jogador2">
+            <div class="avatar-wrapper" style="position: relative;">
+                <span class="simbolo-badge"></span>
+                <div class="avatar"><span class="icone">👤</span></div>
+            </div>
+            <span class="nome">User 2</span>
+        </div>
+
+        <p class="vez">Vez de X jogar</p>
+
+    </div>
+
+    <div class="botoes">
+        <button class="botao1" id="botaoRegras">Regras</button>
+        <button class="botao2" id="botaoReiniciar">Reiniciar</button>
+    </div>
+
+    <div class="overlay" id="overlayResultado">
+        <div class="resultado">
+            <h2 class="resultado-titulo">Vitória!</h2>
+            <p class="resultado-pontos" style="color: #cecece;">Placar final: 0 x 0</p>
+            <button class="botao-reiniciar" id="botaoReiniciarModal">Reiniciar</button>
+            <button class="botao-casa" id="botaoCasa">Início</button>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlayRegras">
+        <div class="regras">
+            <h2>Como jogar</h2>
+            <p>O Jogo da Velha é disputado por dois jogadores em um tabuleiro 3x3. 
+                Um jogador usa o símbolo <strong>X</strong> e o outro <strong>O</strong>, 
+                jogando alternadamente em uma célula vazia por vez. 
+                Quem conseguir alinhar três símbolos iguais na horizontal, vertical ou diagonal vence a partida. 
+                Se todas as células forem preenchidas sem que ninguém consiga alinhar três símbolos, o jogo termina em empate.
+            </p>
+            <button class="botao-fechar" id="fecharRegras">Fechar</button>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+
+</body>
+
+</html>

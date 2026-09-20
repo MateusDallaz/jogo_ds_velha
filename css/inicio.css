@@ -1,0 +1,224 @@
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body {
+    min-height: 100dvh;
+    display: grid;
+    place-content: center;
+    font-family: "Work Sans", sans-serif;
+    position: relative;
+    overflow-x: hidden;
+    background-color: #272727;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+body::before, body::after {
+    position: absolute;
+    font: 700 clamp(1.2rem, 3.5vw, 2.5rem) "Work Sans", sans-serif; 
+    color: rgba(255, 255, 255, 0.035); 
+    pointer-events: none;
+}
+
+body::before { 
+    content: "X"; 
+    top: 10%; 
+    left: 10%; 
+    transform: rotate(-15deg); 
+    text-shadow: 
+        40vw 0 0 rgba(255,255,255,0.035),
+        80vw 0 0 rgba(255,255,255,0.035),
+        20vw 25vh 0 rgba(255,255,255,0.035),
+        60vw 25vh 0 rgba(255,255,255,0.035),
+        0 50vh 0 rgba(255,255,255,0.035),
+        80vw 50vh 0 rgba(255,255,255,0.035),
+        20vw 75vh 0 rgba(255,255,255,0.035),
+        60vw 75vh 0 rgba(255,255,255,0.035),
+        40vw 80vh 0 rgba(255,255,255,0.035);
+}
+
+body::after { 
+    content: "O"; 
+    top: 10%; 
+    left: 30%; 
+    transform: rotate(15deg); 
+    text-shadow: 
+        40vw 0 0 rgba(255,255,255,0.035),
+        -20vw 25vh 0 rgba(255,255,255,0.035),
+        20vw 25vh 0 rgba(255,255,255,0.035),
+        -20vw 50vh 0 rgba(255,255,255,0.035),
+        60vw 50vh 0 rgba(255,255,255,0.035),
+        0 75vh 0 rgba(255,255,255,0.035),
+        40vw 75vh 0 rgba(255,255,255,0.035),
+        -20vw 80vh 0 rgba(255,255,255,0.035),
+        20vw 80vh 0 rgba(255,255,255,0.035);
+}
+
+h1 {
+    color: #989c9e;
+    text-align: center;
+    font: 700 clamp(36px, 8vw, 90px) "Work Sans", sans-serif;
+    letter-spacing: 10px;
+    transition: 0.3s;
+}
+    
+h1:hover {
+    letter-spacing: 15px;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+h2 {
+    color: #989c9e;
+    font: 600 clamp(22px, 3vw, 32px) "Work Sans", sans-serif;
+    text-align: center;
+}
+
+.tela {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(24px, 5vh, 60px);
+    padding: 40px;
+    width: 100%;
+    min-height: 100dvh;
+    max-width: 900px;
+}
+
+.tela.ativa { 
+    display: flex; 
+}
+
+.tela-nome, .tela-personagens, .tela-modo, .tela-simbolo, .tela-cor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.tela-modo { 
+    flex-flow: row wrap; 
+    justify-content: center; 
+}
+
+.tela-modo h2, .tela-personagens h2 { 
+    width: 100%; 
+    grid-column: 1 / -1;
+}
+
+.opcoes-simbolo, .opcoes-cor {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+}
+
+.opcoes-cor {
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.tela-personagens {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 600px;
+    justify-items: center;
+}
+
+.botao-play, .botao-jogar {
+    background: #989c9e;
+    color: #272727;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: clamp(14px, 2vw, 20px) clamp(40px, 6vw, 70px);
+    border-radius: 8px;
+    font: 700 clamp(18px, 2.5vw, 28px) "Work Sans", sans-serif;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.botao-play:hover, .botao-jogar:hover { 
+    letter-spacing: 5px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.input-nome {
+    width: 100%;
+    max-width: 520px;
+    padding: 20px 24px;
+    border-radius: 8px;
+    border: 3px solid #6d7072;
+    background: transparent;
+    font: 600 clamp(18px, 2vw, 24px) "Work Sans", sans-serif;
+    text-align: center;
+    color: #cecece;
+}
+
+.modo {
+    background: transparent;
+    border: 3px solid #6d7072;
+    color: #989c9e;
+    padding: 20px 40px;
+    border-radius: 8px;
+    cursor: pointer;
+    font: 600 clamp(16px, 2vw, 20px) "Work Sans", sans-serif;
+}
+
+.personagem .avatar {
+    width: clamp(80px, 12vw, 130px);
+    height: clamp(80px, 12vw, 130px);
+    margin: 0 auto;
+    background: #cecece;
+    border: 4px solid #6d7072;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.personagem .avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.personagem .icone { 
+    font-size: clamp(40px, 6vw, 60px); 
+}
+
+.simbolo {
+    width: clamp(70px, 10vw, 100px);
+    height: clamp(70px, 10vw, 100px);
+    background: transparent;
+    border: 4px solid #989c9e;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font: 700 clamp(32px, 5vw, 48px) "Work Sans", sans-serif;
+    color: #989c9e;
+    cursor: pointer;
+}
+
+.cor {
+    width: clamp(50px, 8vw, 70px);
+    height: clamp(50px, 8vw, 70px);
+    border-radius: 10px;
+    border: 4px solid #989c9e;
+    cursor: pointer;
+}
+
+.input-nome:focus, .modo.selecionado, .personagem.selecionado .avatar, .simbolo.selecionado, .cor.selecionado { 
+    border-color: #cecece;
+    outline: 3px solid #cecece;
+    outline-offset: 3px;
+}
+
