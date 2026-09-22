@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/inicio.css">
+    <title>Jogo da Velha - Início</title>
+</head>
+
+<body>
+
+    <div class="tela ativa" id="Play">
+        <h1>Jogo da Velha</h1>
+        <button class="botao-play" id="botaoPlay">Play</button>
+    </div>
+
+    <div class="tela tela-config" id="config">
+
+        <div class="tela-nome">
+            <h2>Nome</h2>
+            <input type="text" id="inputNome" class="input-nome" placeholder="Digite seu nome" maxlength="25">
+        </div>
+
+        <div class="tela-personagens">
+            <h2>Personagem</h2>
+            <div class="personagem" data-personagem="1">
+                <div class="avatar"><img src="../img/image1.png" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'icone',textContent:'👤'}))"></div>
+            </div>
+            <div class="personagem" data-personagem="2">
+                <div class="avatar"><img src="../img/image2.png" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'icone',textContent:'👤'}))"></div>
+            </div>
+            <div class="personagem" data-personagem="3">
+                <div class="avatar"><img src="../img/image3.png" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'icone',textContent:'👤'}))"></div>
+            </div>
+            <div class="personagem" data-personagem="4">
+                <div class="avatar"><img src="../img/image4.png" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'icone',textContent:'👤'}))"></div>
+            </div>
+            <div class="personagem" data-personagem="5">
+                <div class="avatar"><img src="../img/image5.png" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'icone',textContent:'👤'}))"></div>
+            </div>
+            <div class="personagem" data-personagem="6">
+                <div class="avatar"><img src="../img/image6.png" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'icone',textContent:'👤'}))"></div>
+            </div>
+        </div>
+
+        <div class="tela-simbolo">
+            <h2>Símbolo</h2>
+            <div class="opcoes-simbolo">
+                <div class="simbolo" data-simbolo="X">X</div>
+                <div class="simbolo" data-simbolo="O">O</div>
+            </div>
+        </div>
+
+        <div class="tela-cor">
+            <h2>Cor</h2>
+            <div class="opcoes-cor">
+                <div class="cor" data-cor="vermelho" style="background:#e05252"></div>
+                <div class="cor" data-cor="rosa" style="background:#e879c9"></div>
+                <div class="cor" data-cor="roxo" style="background:#9b59e0"></div>
+                <div class="cor" data-cor="azul" style="background:#4a90e2"></div>
+                <div class="cor" data-cor="verde" style="background:#4caf7d"></div>
+                <div class="cor" data-cor="amarelo" style="background:#e0c93e"></div>
+            </div>
+        </div>
+
+        <div class="tela-modo">
+            <h2>Modo</h2>
+            <button class="modo" data-modo="aleatorio">Aleatório</button>
+            <button class="modo" data-modo="computador">Computador</button>
+            <button class="modo" data-modo="amigo">Amigo</button>
+        </div>
+
+        <button class="botao-jogar" id="botaoJogar" disabled>Jogar</button>
+
+    </div>
+
+    <script src="../js/inicio.js"></script>
+
+</body>
+
+</html>
