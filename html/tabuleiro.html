@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/tabuleiro.css">
+    <title>Jogo da Velha - Tabuleiro</title>
+</head>
+
+<body>
+
+    <h1>Jogo da Velha</h1>
+    <p class="placar" id="placar">0 x 0</p>
+    <div class="jogadores">
+        <div class="jogador1">
+            <img src="../img/image1.png" alt="Jogador 1">
+            <p>Jogador 1 (X)</p>
+        </div>
+
+        <div class="tabuleiro">
+            <div class="parte"></div>
+            <div class="parte"></div>
+            <div class="parte"></div>
+            <div class="parte"></div>
+            <div class="parte"></div>
+            <div class="parte"></div>
+            <div class="parte"></div>
+            <div class="parte"></div>
+            <div class="parte"></div>
+        </div>
+
+        <div class="jogador2">
+            <img src="../img/image2.png" alt="Jogador 2">
+            <p>Jogador 2 (O)</p>
+        </div>
+
+    </div>
+
+    <p id="vez">Vez de Jogador 1 jogar</p>
+    <button class="botao" id="reiniciar">Reiniciar</button>
+
+    <div class="resultado" id="resultado">
+        <div class="placar-final">
+            <h2 id="titulo-resultado">Vitória!</h2>
+            <p id="placar-final">Placar final: 1 x 0</p>
+            <button class="botao" id="jogar-de-novo">Jogar de novo</button>
+            <a href="index.html" class="botao">Início</a>
+        </div>
+    </div>
+
+    <script src="../js/sons.js"></script>
+    <script src="../js/jogo.js"></script>
+    <script src="../js/tabuleiro.js"></script>
+</body>
+</html>

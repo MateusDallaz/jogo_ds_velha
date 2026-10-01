@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Work Sans", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #272727;
+    color: #cecece;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #989c9e;
+    font-size: 26px;
+}
+
+.nome,
+.personagem,
+.simbolo,
+.cor,
+.modo {
+    margin-bottom: 35px;
+}
+
+.nome {
+    margin-bottom: 50px;
+}
+
+input {
+    width: min(100%, 500px);
+    padding: 15px;
+    background: transparent;
+    color: #cecece;
+    border: 2px solid #6d7072;
+    border-radius: 8px;
+    font-size: 18px;
+    text-align: center;
+}
+
+input:focus {
+    outline: none;
+    border-color: #cecece;
+}
+
+.personagem > div,
+.simbolo > div,
+.cor > div,
+.opcoes .modo {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.personagem > div {
+    display: inline-block;
+    margin: 8px;
+}
+
+.personagem img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    background: #cecece;
+    border: 3px solid #6d7072;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.personagem > div:hover {
+    transform: scale(1.05);
+}
+
+.personagem > div:hover img {
+    border-color: #cecece;
+}
+
+.personagem > div.selecionado img {
+    border-color: #cecece;
+    box-shadow: 0 0 10px #cecece;
+}
+
+.simbolo > div {
+    display: inline-flex;
+    width: 65px;
+    height: 65px;
+    margin: 0 8px;
+    align-items: center;
+    justify-content: center;
+    color: #989c9e;
+    border: 3px solid #6d7072;
+    border-radius: 8px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.simbolo > div:hover {
+    transform: scale(1.1);
+    color: #cecece;
+    border-color: #cecece;
+}
+
+.simbolo > div.selecionado {
+    color: #cecece;
+    border-color: #cecece;
+    box-shadow: 0 0 10px #cecece;
+}
+
+.cor > div {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    margin: 0 7px;
+    border: 3px solid transparent;
+    border-radius: 8px;
+}
+
+.cor > div:hover {
+    transform: scale(1.1);
+    border-color: #cecece;
+}
+
+.cor > div.selecionado {
+    border-color: #cecece;
+    box-shadow: 0 0 10px #cecece;
+}
+
+.vermelho {
+    background: #e05252;
+}
+
+.rosa {
+    background: #e879c9;
+}
+
+.roxo {
+    background: #9b59e0;
+}
+
+.azul {
+    background: #4a90e2;
+}
+
+.verde {
+    background: #4caf7d;
+}
+
+.amarelo {
+    background: #e0c93e;
+}
+
+.opcoes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.opcoes .modo {
+    margin: 0;
+    padding: 12px 25px;
+    color: #989c9e;
+    border: 2px solid #6d7072;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.opcoes .modo:hover {
+    transform: scale(1.05);
+    color: #cecece;
+    border-color: #cecece;
+}
+
+.opcoes .modo.selecionado {
+    color: #cecece;
+    border-color: #cecece;
+    box-shadow: 0 0 10px #cecece;
+}
+
+.nome-amigo {
+    display: none;
+    margin: 25px auto 0;
+}
+
+.nome-amigo.visivel {
+    display: block;
+}
+
+.botao {
+    display: inline-block;
+    padding: 15px 55px;
+    background: #cecece;
+    color: #272727;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    transform: scale(1.05);
+    letter-spacing: 2px;
+    box-shadow: 0 0 10px #cecece;
+}
+
+@media (max-width: 700px) {
+    .personagem img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .cor > div {
+        width: 55px;
+        height: 55px;
+    }
+}
